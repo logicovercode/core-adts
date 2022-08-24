@@ -2,14 +2,9 @@ name := "core-adts"
 
 version := "0.0.001"
 
-autoScalaLibrary := false
+scalaVersion := "2.13.8"
 
-crossScalaVersions := Seq("2.12.15", "2.13.7")
-
-libraryDependencies ++= Seq(
-  "com.logicovercode" %% "docker-core" % "0.0.005",
-  "org.scalatest" %% "scalatest" % "3.2.10" % Test
-)
+crossScalaVersions := Seq("2.13.8", "3.1.3")
 
 val projectSourceDirs = List("adts")
 Compile / unmanagedSourceDirectories ++= projectSourceDirs.map(dir => (Compile / baseDirectory).value / dir)
@@ -42,6 +37,6 @@ licenses += ("MIT", url("https://opensource.org/licenses/MIT"))
 //publishMavenStyle := true
 publishTo := Some(Opts.resolver.sonatypeStaging)
 
-publishConfiguration := publishConfiguration.value.withOverwrite(true)
+publishLocalConfiguration := publishLocalConfiguration.value.withOverwrite(true)
 
 val fSbtAdtsProject = project in file(".")
