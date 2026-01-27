@@ -2,9 +2,9 @@ name := "core-adts"
 
 version := "0.0.001"
 
-scalaVersion := "2.13.8"
+scalaVersion := "2.13.12"
 
-crossScalaVersions := Seq("2.13.8", "3.3.1")
+crossScalaVersions := Seq("2.13.12", "3.3.1")
 
 val projectSourceDirs = List("adts")
 Compile / unmanagedSourceDirectories ++= projectSourceDirs.map(dir => (Compile / baseDirectory).value / dir)
